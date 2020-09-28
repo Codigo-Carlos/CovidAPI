@@ -4,11 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.net.ConnectivityManager;
+import android.net.Network;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.util.Log;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.gemu404.covidapi.adapter.AdapterCountry;
 import com.gemu404.covidapi.model.Country;
@@ -27,12 +31,28 @@ import cz.msebera.android.httpclient.Header;
 public class MainActivity extends AppCompatActivity {
 
     private static final String URL="https://api.covid19api.com/summary";
-
+    TextView GNcases,GAcases,GNrecover,GArecover,GNdeath,GAdeath;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        procesoHTTP();
+
+        if (internetcheck()) {
+            setContentView(R.layout.activity_main);
+            procesoHTTP();
+            cargarGlobal();
+        } else {
+            setContentView(R.layout.empty_internet_activity);
+        }
+
+    }
+
+    private void cargarGlobal() {
+        GAcases = findViewById(R.id.item_totalcases);
+        GAdeath = findViewById(R.id.item_totaldeaths);
+        GArecover = findViewById(R.id.item_totalrecovered);
+        GNcases = findViewById(R.id.item_newcases);
+        GNdeath = findViewById(R.id.item_newdeaths);
+        GNrecover = findViewById(R.id.item_newrecovered);
     }
 
     private void procesoHTTP() {
@@ -50,7 +70,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
     private void procesarCiudades(String data) {
         try {
             JSONObject root = new JSONObject(data);
@@ -62,6 +81,14 @@ public class MainActivity extends AppCompatActivity {
                 String Tdeaths = global.getString("TotalDeaths");
                 String Nrecovered = global.getString("NewRecovered");
                 String Trecovered = global.getString("TotalRecovered");
+
+            GAcases.setText(Nconfirmed);
+            GNcases.setText(Tconfirmed);
+            GAdeath.setText(Tdeaths);
+            GNdeath.setText(Ndeaths);
+            GArecover.setText(Nrecovered);
+            GNrecover.setText(Trecovered);
+
 
             JSONArray country = root.getJSONArray("Countries");
 
@@ -89,9 +116,24 @@ public class MainActivity extends AppCompatActivity {
             rc.setAdapter(ad);
 
 
+
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
+    }
+    public boolean internetcheck(){
+        ConnectivityManager conect;
+        conect = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
+
+        Network [] networks = conect.getAllNetworks();
+        boolean conected = false;
+        for (Network network : networks){
+            NetworkInfo info = conect.getNetworkInfo(network);
+            if (info.isConnected()) {
+                conected = true;
+            }
+        }
+                return conected;
     }
 }

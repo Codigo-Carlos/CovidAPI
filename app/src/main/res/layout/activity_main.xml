@@ -4,111 +4,119 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:paddingHorizontal="15dp">
-   <TextView
+    tools:context=".MainActivity">
+   <RelativeLayout
        android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:text="COVID-19 TRACKER "
-       android:textSize="30dp"
-       android:layout_centerHorizontal="true"
-       android:textStyle="bold"
-       />
-   <TextView
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:text="GLOBAL DATA"
-       android:layout_centerHorizontal="true"
-       android:layout_marginTop="35dp"
-       />
+       android:layout_height="150dp"
+       android:paddingHorizontal="10dp">
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="COVID-19 TRACKER "
+          android:textSize="30dp"
+          android:layout_centerHorizontal="true"
+          android:textStyle="bold"
+          />
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="GLOBAL DATA"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="35dp"
+          />
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="New Cases"
+          android:layout_marginTop="60dp"/>
+      <TextView
+          android:id="@+id/item_newcases"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="1000"
+          android:layout_marginTop="80dp"
+          android:textSize="10dp"
+          />
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Active Cases"
+          android:layout_marginTop="100dp"/>
+      <TextView
+          android:id="@+id/item_totalcases"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="1000"
+          android:layout_marginTop="120dp"
+          android:textSize="10dp"
+          />
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Recoveries"
+          android:layout_marginTop="60dp"
+          android:layout_centerHorizontal="true"/>
+      <TextView
+          android:id="@+id/item_newrecovered"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="1000"
+          android:layout_marginTop="80dp"
+          android:textSize="10dp"
+          android:layout_centerHorizontal="true"/>
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Total Recovered"
+          android:layout_marginTop="100dp"
+          android:layout_centerHorizontal="true"/>
+      <TextView
+          android:id="@+id/item_totalrecovered"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="1000"
+          android:layout_marginTop="120dp"
+          android:textSize="10dp"
+          android:layout_centerHorizontal="true"/>
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Deaths"
+          android:layout_marginTop="60dp"
+          android:layout_alignParentEnd="true"/>
+      <TextView
+          android:id="@+id/item_newdeaths"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="1000"
+          android:layout_marginTop="80dp"
+          android:textSize="10dp"
+          android:layout_alignParentEnd="true"/>
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Total Deaths"
+          android:layout_marginTop="100dp"
+          android:layout_alignParentEnd="true"/>
+      <TextView
+          android:id="@+id/item_totaldeaths"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="1000"
+          android:layout_marginTop="120dp"
+          android:textSize="10dp"
+          android:layout_alignParentEnd="true"/>
+   </RelativeLayout>
+
+
+
 
    <androidx.recyclerview.widget.RecyclerView
       android:layout_marginTop="150dp"
       android:id="@+id/rc_country"
        android:layout_width="match_parent"
        android:layout_height="match_parent"/>
-   <TextView
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:text="New Cases"
-       android:layout_marginTop="60dp"/>
-   <TextView
-       android:id="@+id/item_newcases"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:text="1000"
-       android:layout_marginTop="80dp"
-       android:textSize="10dp"
-       />
-   <TextView
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:text="Active Cases"
-       android:layout_marginTop="100dp"/>
-   <TextView
-       android:id="@+id/item_totalcases"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:text="1000"
-       android:layout_marginTop="120dp"
-       android:textSize="10dp"
-       />
-   <TextView
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:text="Recovered"
-       android:layout_marginTop="60dp"
-       android:layout_centerHorizontal="true"/>
-   <TextView
-       android:id="@+id/item_newrecovered"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:text="1000"
-       android:layout_marginTop="80dp"
-       android:textSize="10dp"
-       android:layout_centerHorizontal="true"/>
-   <TextView
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:text="Total Recovered"
-       android:layout_marginTop="100dp"
-       android:layout_centerHorizontal="true"/>
-   <TextView
-       android:id="@+id/item_totalrecovered"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:text="1000"
-       android:layout_marginTop="120dp"
-       android:textSize="10dp"
-       android:layout_centerHorizontal="true"/>
-   <TextView
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:text="Deaths"
-       android:layout_marginTop="60dp"
-       android:layout_alignParentEnd="true"/>
-   <TextView
-       android:id="@+id/item_newdeaths"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:text="1000"
-       android:layout_marginTop="80dp"
-       android:textSize="10dp"
-       android:layout_alignParentEnd="true"/>
-   <TextView
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:text="Total Recovered"
-       android:layout_marginTop="100dp"
-       android:layout_alignParentEnd="true"/>
-   <TextView
-       android:id="@+id/item_totaldeaths"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:text="1000"
-       android:layout_marginTop="120dp"
-       android:textSize="10dp"
-       android:layout_alignParentEnd="true"/>
+
 
 
 

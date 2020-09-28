@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MoreInfoActivity"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/img_flag"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:src="@drawable/flag"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="COUNTRY"
+        android:textSize="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/item_Ncases"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1000"
+        android:textSize="25dp"
+        android:layout_marginTop="250dp"
+        android:layout_alignParentEnd="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Cases"
+        android:textSize="25dp"
+        android:layout_marginTop="250dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Active Cases"
+        android:textSize="25dp"
+        android:layout_marginTop="280dp"/>
+    <TextView
+        android:id="@+id/item_Tcases"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1000"
+        android:textSize="25dp"
+        android:layout_marginTop="280dp"
+        android:layout_alignParentEnd="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recoveries"
+        android:textSize="25dp"
+        android:layout_marginTop="320dp"/>
+    <TextView
+        android:id="@+id/item_Nrecovered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1000"
+        android:textSize="25dp"
+        android:layout_marginTop="320dp"
+        android:layout_alignParentEnd="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Recovered"
+        android:textSize="25dp"
+        android:layout_marginTop="350dp"/>
+    <TextView
+        android:id="@+id/item_Trecovered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1000"
+        android:textSize="25dp"
+        android:layout_marginTop="350dp"
+        android:layout_alignParentEnd="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Deaths"
+        android:textSize="25dp"
+        android:layout_marginTop="390dp"/>
+    <TextView
+        android:id="@+id/item_Ndeaths"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1000"
+        android:textSize="25dp"
+        android:layout_marginTop="390dp"
+        android:layout_alignParentEnd="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Deaths"
+        android:textSize="25dp"
+        android:layout_marginTop="420dp"/>
+    <TextView
+        android:id="@+id/item_Tdeaths"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1000"
+        android:textSize="25dp"
+        android:layout_marginTop="420dp"
+        android:layout_alignParentEnd="true"/>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="
+this information may not be accurate"
+        android:layout_marginTop="600dp"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_card"
     android:layout_width="wrap_content"
     android:layout_height="100dp"
     android:paddingHorizontal="15dp"
@@ -7,7 +8,13 @@
     android:layout_marginVertical="5dp">
 
 
-
+    <TextView
+        android:id="@+id/item_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="XD"
+        android:textSize="8dp"/>
     <TextView
         android:id="@+id/item_country"
         android:layout_width="wrap_content"
@@ -25,7 +32,7 @@
         android:text="Cases"
         />
     <TextView
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="40dp"
         android:id="@+id/item_recovered"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -50,7 +57,7 @@
         android:layout_alignParentBottom="true"
         />
     <TextView
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="15dp"
         android:id="@+id/item_allrecovred"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -71,10 +78,10 @@
         />
     <View
         android:layout_width="40dp"
-        android:layout_height="2dp"
+        android:layout_height="4dp"
         android:background="@color/colorAccent"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="95dp"
+        android:layout_marginTop="90dp"
         />
 
 </RelativeLayout>

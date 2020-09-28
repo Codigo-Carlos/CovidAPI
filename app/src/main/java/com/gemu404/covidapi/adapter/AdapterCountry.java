@@ -1,15 +1,19 @@
 package com.gemu404.covidapi.adapter;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.gemu404.covidapi.MoreInfoActivity;
 import com.gemu404.covidapi.R;
 import com.gemu404.covidapi.model.Country;
 
@@ -31,7 +35,6 @@ public class AdapterCountry extends RecyclerView.Adapter<AdapterCountry.CountryH
     @Override
     public CountryHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(item_country,parent,false);
-
         return new CountryHolder(view);
     }
 
@@ -42,7 +45,7 @@ public class AdapterCountry extends RecyclerView.Adapter<AdapterCountry.CountryH
         holder.item_alldeaths.setText(country.TotalDeaths);
         holder.item_allcases.setText(country.TotalConfirmed);
         holder.item_allrecovered.setText(country.TotalRecovered);
-
+        holder.item_code.setText(country.Code);
 
     }
 
@@ -55,13 +58,28 @@ public class AdapterCountry extends RecyclerView.Adapter<AdapterCountry.CountryH
         TextView    item_allcases,
                     item_alldeaths,
                     item_allrecovered,
-                    item_country;
+                    item_country,
+                    item_code;
+        RelativeLayout item_card;
+
         public CountryHolder(@NonNull View itemView) {
             super(itemView);
             item_country = itemView.findViewById(R.id.item_country);
             item_allcases = itemView.findViewById(R.id.item_allcases);
             item_alldeaths = itemView.findViewById(R.id.item_alldeaths);
             item_allrecovered= itemView.findViewById(R.id.item_allrecovred);
+            item_code = itemView.findViewById(R.id.item_code);
+            item_card = itemView.findViewById(R.id.item_card);
+
+
+            item_card.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent in = new Intent(activity, MoreInfoActivity.class);
+                    in.putExtra("CODE",item_code.getText().toString());
+                    activity.startActivity(in);
+                }
+            });
         }
     }
 }
