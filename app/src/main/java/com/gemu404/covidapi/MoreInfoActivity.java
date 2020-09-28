@@ -10,7 +10,6 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.gemu404.covidapi.model.Country;
-import com.gemu404.covidapi.model.Country;
 
 import org.json.JSONObject;
 

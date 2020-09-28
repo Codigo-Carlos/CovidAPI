@@ -7,8 +7,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="300dp"
         android:text="INTERNET NOT FOUND \n     TRY AGAIN LATER"
-        android:textSize="30dp"
-        android:textStyle="bold" />
+        android:textSize="30sp"
+        android:textStyle="bold"
+        />
+    <Button
+        android:id="@+id/item_tryinternet"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Try Now"
+        android:layout_gravity="center" />
 </LinearLayout>
