@@ -76,7 +76,16 @@ public class AdapterCountry extends RecyclerView.Adapter<AdapterCountry.CountryH
                 @Override
                 public void onClick(View v) {
                     Intent in = new Intent(activity, MoreInfoActivity.class);
-                    in.putExtra("CODE",item_code.getText().toString());
+                    int Pos = getAdapterPosition();
+                    Country country = list.get(Pos);
+                    in.putExtra("CODE",country.Code);
+                    in.putExtra("NAME",country.Name);
+                    in.putExtra("NCON",country.NewConfirmed);
+                    in.putExtra("TCON",country.TotalConfirmed);
+                    in.putExtra("NREC",country.NewRecovered);
+                    in.putExtra("TREC",country.TotalRecovered);
+                    in.putExtra("NDEA",country.NewDeaths);
+                    in.putExtra("TDEA",country.TotalDeaths);
                     activity.startActivity(in);
                 }
             });

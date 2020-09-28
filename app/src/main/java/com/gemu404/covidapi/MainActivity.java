@@ -107,6 +107,9 @@ public class MainActivity extends AppCompatActivity {
                     Country Co = new Country(Nombre, Codigo, P_Nconfirmed, P_Tconfirmed, P_Ndeaths, P_Tdeaths, P_Nrecovered, P_Trecovered);
                     list.add(Co);
                 }
+
+
+
             RecyclerView rc = findViewById(R.id.rc_country);
             AdapterCountry ad = new AdapterCountry(this,list,R.layout.item_country);
             LinearLayoutManager lm = new LinearLayoutManager(this);
