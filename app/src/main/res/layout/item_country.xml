@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="100dp"
+    android:paddingHorizontal="15dp"
+    android:background="@color/cardview_light_background"
+    android:layout_marginVertical="5dp">
+
+
+
+    <TextView
+        android:id="@+id/item_country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Country Name"
+        android:textSize="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        />
+    <TextView
+        android:layout_marginTop="50dp"
+        android:id="@+id/item_cases"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cases"
+        />
+    <TextView
+        android:layout_marginTop="45dp"
+        android:id="@+id/item_recovered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recovered"
+        android:layout_centerHorizontal="true"
+        />
+    <TextView
+        android:id="@+id/item_deaths"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Deaths"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="50dp"
+        />
+    <TextView
+        android:layout_marginBottom="5dp"
+        android:id="@+id/item_allcases"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100000"
+        android:textSize="18dp"
+        android:layout_alignParentBottom="true"
+        />
+    <TextView
+        android:layout_marginBottom="10dp"
+        android:id="@+id/item_allrecovred"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100000"
+        android:textSize="18dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        />
+    <TextView
+        android:layout_marginBottom="5dp"
+        android:id="@+id/item_alldeaths"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100000"
+        android:textSize="18dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        />
+    <View
+        android:layout_width="40dp"
+        android:layout_height="2dp"
+        android:background="@color/colorAccent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="95dp"
+        />
+
+</RelativeLayout>
